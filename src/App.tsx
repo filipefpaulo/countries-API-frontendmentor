@@ -1,7 +1,5 @@
-import Hello from '~/components/Hello';
-
 function App() {
-  return <Hello />;
+  return <div>Countries API</div>;
 }
 
 export default App;
