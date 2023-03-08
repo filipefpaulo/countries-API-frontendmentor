@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { formatNumber } from '~/helpers/formatNumber';
 import { useSelector } from '~/hooks/useRedux';
 import { CountryInterface } from '~/interface/country.interface';
 
@@ -10,7 +11,7 @@ export function CountrieCard({ country }: CountrieCardProps) {
   const darkMode = useSelector((state) => state.darkMode.mode);
 
   const infos = [
-    { title: 'Population', value: country.population },
+    { title: 'Population', value: formatNumber(country.population) },
     { title: 'Region', value: country.region },
     { title: 'Capital', value: country.capital },
   ];
